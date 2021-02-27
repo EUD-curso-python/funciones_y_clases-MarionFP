@@ -75,8 +75,9 @@ def contar_valles(lista1):
           if iteracion == 0 and valora == -1:
             lista2.append(lista1[elemento])
           elif iteracion > 0 and (valora != valorb):
-            valoranterior = elemento
-            lista2.append(lista1[elemento])
+            if valora == -1 or len(lista2)>0:
+              valoranterior = elemento
+              lista2.append(lista1[elemento])
         iteracion +=1
     print(lista2)
     
