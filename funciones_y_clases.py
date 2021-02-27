@@ -62,19 +62,22 @@ def contar_valles(lista1):
     representados en la lista, que para el ejemplo que se acaba de mostrar es
     de 3 valles.
     '''
-    iteracion = 0
     lista2 = []
     valora = 0
     valorb = 0
     valoranterior = 0
+    iteracion = 0
+
     for elemento in lista1:
-      if iteracion < len(lista1)-1:
         valora = elemento
         valorb = valoranterior
-        if elemento != 0 and (valora != valorb):
-          valoranterior = elemento
-          lista2.append(lista1[elemento])
-        iteracion += 1
+        if elemento != 0:
+          if iteracion == 0:
+            lista2.append(lista1[elemento])
+          elif (valora != valorb):
+            valoranterior = elemento
+            lista2.append(lista1[elemento])
+        iteracion +=1
     print(lista2)
     
     valle = 0
