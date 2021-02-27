@@ -11,10 +11,10 @@ def cambiar_global(a):
     print (global1)
 
 cambiar_global(7)
-    
+   
 
 
-def anio_bisiesto():
+def anio_bisiesto(anio):
     '''Responder si el entero pasado como argumento es un año bisiesto
     
     Para determinar si un año es bisiesto, se deben tener en cuenta las 
@@ -26,7 +26,22 @@ def anio_bisiesto():
 
     Retorna True o False
     '''
-    pass
+    if anio%4 == 0:
+      bisiesto = True
+      if anio%100 == 0:
+        bisiesto = False
+        if anio%400 == 0:
+          bisiesto = True
+        else:
+          bisiesto = False
+    else:
+      bisiesto = False
+    #print(bisiesto)
+    return(bisiesto)
+
+es_bisiesto = anio_bisiesto(2021)
+print(es_bisiesto)
+
 
 def contar_valles():
     r'''Contar el número de valles
