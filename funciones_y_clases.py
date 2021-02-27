@@ -41,9 +41,10 @@ def anio_bisiesto(anio):
 
 es_bisiesto = anio_bisiesto(2021)
 print(es_bisiesto)
+print('')
 
 
-def contar_valles():
+def contar_valles(lista1):
     r'''Contar el número de valles
 
     Esta función debe recibir como argumento una lista de -1's, 0's y 1's, y lo 
@@ -61,7 +62,34 @@ def contar_valles():
     representados en la lista, que para el ejemplo que se acaba de mostrar es
     de 3 valles.
     '''
-    pass
+    iteracion = 0
+    lista2 = []
+    valora = 0
+    valorb = 0
+    valoranterior = 0
+    for elemento in lista1:
+      if iteracion < len(lista1)-1:
+        valora = elemento
+        valorb = valoranterior
+        if elemento != 0 and (valora != valorb):
+          valoranterior = elemento
+          lista2.append(lista1[elemento])
+        iteracion += 1
+    print(lista2)
+    
+    valle = 0
+    contador = 0
+
+    for elemento2 in lista2:
+      valle += elemento2
+      print(valle)
+      if valle == 0:
+        contador += 1
+    return(contador)   
+
+terreno=[-1 , 1 , 0 , 1 , 1 , -1 , 0 , 0 , 1 , -1 , 1 , 1 , -1 , -1 ]
+cantvalles = contar_valles(terreno)
+print('cantidad de valles: ' + str(cantvalles))
 
 def saltando_rocas():
     '''Mínimo número de saltos en las rocas
