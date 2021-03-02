@@ -116,13 +116,13 @@ def saltando_rocas(listarocas):
     jugador para ganar la partida
     '''
 
-    pos = -1
+    pos = 0
     contador_s = 0
     iterador = 0
 
     for i in listarocas:
 
-      if iterador == pos or pos == -1:
+      if iterador == pos :
 
         if (pos + 2) < len(listarocas):
         
