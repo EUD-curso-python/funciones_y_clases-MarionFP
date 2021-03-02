@@ -124,63 +124,33 @@ def saltando_rocas(listarocas):
 
       if iterador == pos or pos == -1:
 
-        if (pos + 3) < len(listarocas):
+        if (pos + 2) < len(listarocas):
         
-          if listarocas[pos+1] == listarocas[pos+2] == listarocas[pos+3] ==1:
-            pass 
-
-          elif listarocas[pos+3] == 0:
-
-            pos += 3
-            contador_s += 1
-            print('paso1')
-
-          elif listarocas[pos+2] == 0:
-
-            pos += 2
-            contador_s += 1
-            print('paso2')
-
-          elif listarocas[pos+1] == 0:
-            
-            pos += 1
-            contador_s += 1
-            print('paso3')
-
-          print(pos)
-          print(contador_s)
-
-        elif (pos + 2) < len(listarocas):
-
           if listarocas[pos+1] == listarocas[pos+2] ==1:
             pass 
-
           elif listarocas[pos+2] == 0:
-
             pos += 2
             contador_s += 1
-            print('paso4')
-
+            print('paso1')
           elif listarocas[pos+1] == 0:
-
             pos += 1
-            contador_s += 1         
-            print('paso5') 
+            contador_s += 1
+            print('paso2')
 
           print(pos)
           print(contador_s)
 
         elif (pos + 1) < len(listarocas):
 
-          if listarocas[pos+1] ==1:
-            pass
-          elif listarocas[pos + 1] == 0:
+          if listarocas[pos+1] == 1:
+            pass 
+          elif listarocas[pos+1] == 0:
             pos += 1
-            contador_s += 1   
-
-            print('paso6')     
+            contador_s += 1
+            print('paso4')
+            
           print(pos)
-          print(contador_s)
+          print(contador_s)        
           
         print('posicion: ' + str(pos))
         print('contador: ' + str(contador_s))
