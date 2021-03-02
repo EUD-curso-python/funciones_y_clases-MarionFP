@@ -99,6 +99,7 @@ print('cantidad de valles: ' + str(cantvalles))
 terreno=[0, 0 , 0 , 1 , 1 , -1 , 0 , 0 , 1 , -1 , -1 , -1 , -1 , -1 ]
 cantvalles = contar_valles(terreno)
 print('cantidad de valles: ' + str(cantvalles))
+print('')
 
 def saltando_rocas(listarocas):
     '''Mínimo número de saltos en las rocas
@@ -114,8 +115,50 @@ def saltando_rocas(listarocas):
     El objetivo es devolver el número mínimo de saltos que debe realizar el 
     jugador para ganar la partida
     '''
+
+    pos = 0
+    contador_s = 0
+
     for i in listarocas:
-      pass
+      if i = pos:
+        if (pos + 2) < len(listarocas):
+        
+          if listarocas[pos+2] == 0:
+            pos += 2
+            contador_s += 1
+          elif listarocas[pos+1] == 0:
+            pos += 1
+            contador_s += 1
+          elif listarocas[pos] == 0:
+            contador_s += 1
+          print(pos)
+          print(contador_s)
+
+        elif (pos + 1) < len(listarocas):
+
+          if listarocas[pos+1] == 0:
+            pos += 1
+            contador_s += 1
+          elif listarocas[pos] == 0:
+            contador_s += 1          
+          print(pos)
+          print(contador_s)
+
+        elif pos < len(listarocas):
+
+          if listarocas[pos] == 0:
+            contador_s += 1          
+          print(pos)
+          print(contador_s)
+
+      print('')
+
+    
+    return(contador_s)
+
+listar = [1,0,0,1,1,0,1]
+cantidad_saltos = saltando_rocas(listar)
+print('cantidad de saltos: ' + str(cantidad_saltos))
 
 def pares_medias():
     '''Contar pares de medias
