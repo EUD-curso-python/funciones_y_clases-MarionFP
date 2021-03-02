@@ -191,14 +191,17 @@ def saltando_rocas(listarocas):
 
 listar = [0,0,0,1,1,0,1]
 cantidad_saltos = saltando_rocas(listar)
+print(listar)
 print('cantidad de saltos: ' + str(cantidad_saltos))
 
 listar = [0,0,1,1,0,0,1]
 cantidad_saltos = saltando_rocas(listar)
+print(listar)
 print('cantidad de saltos: ' + str(cantidad_saltos))
 
 listar = [0,1,1,1,0,0,1]
 cantidad_saltos = saltando_rocas(listar)
+print(listar)
 print('cantidad de saltos: ' + str(cantidad_saltos))
 
 def pares_medias():
