@@ -66,19 +66,16 @@ def contar_valles(lista1):
     valora = 0
     valorb = 0
     valoranterior = 0
-    iteracion = 0
+    #iteracion = 0
 
     for elemento in lista1:
         valora = elemento
         valorb = valoranterior
         if elemento != 0:
-          if iteracion == 0 and valora == -1:
-            lista2.append(lista1[elemento])
-          elif iteracion > 0 and (valora != valorb):
-            if valora == -1 or len(lista2)>0:
+          if (elemento == 1 and len(lista2) > 0) or elemento == -1:
+            if valora != valorb:
+              lista2.append(elemento)
               valoranterior = elemento
-              lista2.append(lista1[elemento])
-        iteracion +=1
     print(lista2)
     
     valle = 0
@@ -96,6 +93,10 @@ cantvalles = contar_valles(terreno)
 print('cantidad de valles: ' + str(cantvalles))
 
 terreno=[0 , 1 , 0 , 1 , 1 , -1 , 0 , 0 , 1 , -1 , 1 , 1 , -1 , -1 ]
+cantvalles = contar_valles(terreno)
+print('cantidad de valles: ' + str(cantvalles))
+
+terreno=[0, 0 , 0 , 1 , 1 , -1 , 0 , 0 , 1 , -1 , -1 , -1 , -1 , -1 ]
 cantvalles = contar_valles(terreno)
 print('cantidad de valles: ' + str(cantvalles))
 
